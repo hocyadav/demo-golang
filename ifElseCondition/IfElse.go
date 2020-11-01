@@ -13,9 +13,18 @@ func main() {
 	switchWithoutCase(y)
 	//for loop same as java
 	forLoopSameAsJava()
+
+	name := "hariom" //string in go is immutable we cant change
+	fmt.Println(name)
+
+	fmt.Println(len(name))// #f byte in string
+	fmt.Printf("name[0] : %v, name type %T\n", name[0], name[0])
+	//uint8 is a byte
+
 }
 
 func forLoopSameAsJava() {
+
 	for i := 0; i < 5; i++ {
 		fmt.Println(i)
 	}
