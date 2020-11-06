@@ -8,19 +8,37 @@ type Student struct {
 	Address string
 }
 
-func main() {
-	student1 := Student{"hari", 30, "bangalore"}
-	fmt.Println(student1)
-	fmt.Printf("student %+v \n", student1) // +v gives nice view of struct
+func (receiver *Student) updateName()  {
+	receiver.Name = receiver.Name + "_new"
+}
 
-	student2 := Student{
+func (receiver *Student) updateName2()  string{
+	receiver.Name = receiver.Name + "_new"
+	return  receiver.Name
+}
+
+func main() {
+	student2 := Student{// storing simple obj
 		Name:    "omp",
 		Age:     27,
 		Address: "karnataka",
 	}
 	fmt.Printf("student 2 %+v \n", student2)
+	student2.updateName()
+	fmt.Printf("student 2 %+v \n", student2)
 
-	student3 := Student{} //assign default values
-	fmt.Printf("student 3 %+v \n", student3)
+
+	student3 := &Student{ // storing as pointer - this will also work when we are calling struct method update
+		Name:    "omp",
+		Age:     27,
+		Address: "karnataka",
+	}
+	fmt.Println(student3) // print pointer
+	fmt.Println(*student3) // print actual value
+	student3.updateName() // only update name
+	fmt.Println(student3)
+
+	name2 := student3.updateName2() // update + return value
+	fmt.Println(name2)
 
 }
