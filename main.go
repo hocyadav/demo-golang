@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	strVar := "hello..hari"
@@ -12,7 +14,7 @@ func main() {
 	multipleDeclarationInSingleLine()
 
 	a := 123
-	s := fmt.Sprintf("%d",a)
+	s := fmt.Sprintf("%d",a)// convert int to str: Sprintf return string
 	fmt.Printf("value : %s Type : %T \n", s, s)// value of str access via %s, value of int access via %d
 	fmt.Printf("value : %q Type : %T \n", s, s)// value of str access via %s, and %q add double quote both side
 
