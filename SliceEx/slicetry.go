@@ -3,41 +3,41 @@ package main
 import "fmt"
 
 func main() {
-	slice1 := []string{"hari", "om", "yadav"} // slices are build on top of arrays
-	fmt.Println(len(slice1))
+	sliceOfString := []string{"hari", "om", "yadav"} // slices are build on top of arrays
+	fmt.Println(len(sliceOfString))
 
-	fmt.Println(slice1)
-	fmt.Printf("%v", slice1)
+	fmt.Println(sliceOfString)
+	fmt.Printf("%v", sliceOfString)
 	fmt.Println()
-	fmt.Println(slice1[0:1])
-	fmt.Println(slice1[1:])
-	fmt.Println(slice1[:1])
+	fmt.Println(sliceOfString[0:1])
+	fmt.Println(sliceOfString[1:])
+	fmt.Println(sliceOfString[:1])
 
-	for i := 0; i < len(slice1); i++ {
-		fmt.Println("- ",slice1[i])
+	for i := 0; i < len(sliceOfString); i++ {
+		fmt.Println("- ", sliceOfString[i])
 	}
 
-	for i := range slice1 {
+	for i := range sliceOfString {
 		fmt.Println(i) //print only index, only key
 	}
 
-	for i, i2 := range slice1 {// print index and value, key and value
+	for i, i2 := range sliceOfString { // print index and value, key and value
 		fmt.Println(i," ",i2)
 	}
 
-	for _, i2 := range slice1 {//print only value
+	for _, i2 := range sliceOfString { //print only value
 		fmt.Println(i2)
 	}
 
 	// add new element at the end of slice
-	slice1 = append(slice1, "chandan")
-	fmt.Println(slice1)
+	sliceOfString = append(sliceOfString, "chandan")
+	fmt.Println(sliceOfString)
 
 
 	// find max
-	slice2 := []int{1,22,4,1212,56}
-	max := slice2[0] // store 1st value
-	for _, it := range slice2[1:] {// iterate from 2nd value to last
+	sliceOfInt := []int{1,22,4,1212,56}
+	max := sliceOfInt[0]                // store 1st value
+	for _, it := range sliceOfInt[1:] { // iterate from 2nd value to last
 		if it > max {
 			max = it
 		}
