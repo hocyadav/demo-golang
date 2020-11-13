@@ -3,11 +3,8 @@ package main
 import "fmt"
 // https://www.geeksforgeeks.org/interfaces-in-golang/
 func main() {
-	var a interface{} = "hariom"
-	myfun(a)
-
-	var b interface{} = 123
-	myfun(b)
+	myfun("hariom")//all type is interface type with empty body :IMP
+	myfun(123)
 }
 
 func myfun(a interface{}) {
