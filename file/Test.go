@@ -5,7 +5,7 @@ import (
 	//"github.com/pelletier/go-toml" //working
 	//toml "github.com/pelletier/go-toml" //working
 	toml1 "github.com/pelletier/go-toml"
-	"log"Sq
+	"log"
 	"os"
 )
 
