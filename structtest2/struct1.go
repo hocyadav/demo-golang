@@ -1,18 +1,20 @@
 package main
 
 import "fmt"
-
+// java class
 type Student struct {
 	Name string //Name means access via other packages like Public, name means private
 	Age int
 	Address string
 }
 
+// its like method inside class
 func (receiver *Student) updateName()  {
 	receiver.Name = receiver.Name + "_new"
 }
 
-func (receiver *Student) updateName2()  string{
+// its like method inside class
+func (receiver *Student) updateName2()  string{// imp add * as receiver
 	receiver.Name = receiver.Name + "_new"
 	return  receiver.Name
 }
