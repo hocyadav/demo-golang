@@ -6,19 +6,9 @@ type myinterface interface {
 	InterfaceFun() int
 }
 
-type Square struct {
-	Length int
-}
-func (s *Square) InterfaceFun() int {
-	return s.Length * s.Length
-	//panic("implement me")
-}
-
 func main() {
 	var t myinterface// declare variable interface type
-	t = &Square{ // store address of class that have implemented interface method
-		Length: 12,
-	}
-	valueFromInterface := t.InterfaceFun()//call interface method
-	fmt.Println(valueFromInterface)
+
+	fmt.Println("interface value ",t)// interface return dynamic value
+	fmt.Printf("interface type %T", t)//nil coz this interface dont know who has implemented this interface
 }
